@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - LifeDrop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/benefits.css">
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="nav-logo">
+        <img src="image/logo-red.png" alt="LifeDrop logo">
+        <h1>LifeDrop</h1>
+      </div>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links-ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="locations.html">Locations</a></li>
+      </ul>
+
+      <a href="donate.html" class="nav-btn-a">Become a Donor</a>
+    </nav>
+
+    <main>
+      <section class="hero-banner">
+        <div class="hero-content">
+          <span class="hero-sub">KNOWLEDGE. FACTS YOU SHOULD KNOW.</span>
+          <h1 class="hero-title">Benefits & Myths</h1>
+          <p class="hero-des">Donation is one of the safest, most studied medical acts in the world. Here's what science
+            — and faith — actually say about giving blood.</p>
+        </div>
+      </section>
+
+      <section class="benefits-section">
+        <div class="section-intro">
+          <span class="intro-sub">- THE BENEFITS</span>
+          <h2>Why your one hour matters?</h2>
+        </div>
+
+        <div class="cards-grid">
+          <div class="benefit-card">
+            <div class="card-icon">❤️</div>
+            <h3>Saves Lives</h3>
+            <p>A single donation can be split into red cells, plasma, and platelets — helping up to three patients in
+              critical need.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="card-icon">🏥</div>
+            <h3>Supports Hospitals</h3>
+            <p>Stocked blood banks mean surgeons, ER teams, and maternity wards can act the moment seconds count.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="card-icon">🤝</div>
+            <h3>Builds Community</h3>
+            <p>A culture of regular donation strengthens the entire city's ability to respond to emergencies and
+              disasters.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="card-icon">🩺</div>
+            <h3>Free Health Checks</h3>
+            <p>Every donor receives a complimentary screening of blood pressure, pulse, hemoglobin, and infectious
+              markers.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="card-icon">🔄</div>
+            <h3>Stimulates Renewal</h3>
+            <p>Donation encourages your body to produce fresh red blood cells, supporting healthy circulation.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="card-icon">🌟</div>
+            <h3>Profound Reward</h3>
+            <p>Few experiences match knowing your gift gave someone's child, parent, or friend more time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="myths-section">
+        <div class="section-intro">
+          <span class="intro-sub">- MYTHS VS FACTS</span>
+          <h2>Separating fear from truth.</h2>
+        </div>
+
+        <div class="cards-grid">
+          <div class="myth-card">
+            <span class="myth-badge">MYTH</span>
+            <h3>Blood donation is dangerous.</h3>
+            <p class="myth-subtext">Some people fear infections, pain, or complications.</p>
+            <div class="fact-box">
+              <p><strong>Fact:</strong> Donation is performed by trained professionals using sterile, single-use
+                equipment. The process is one of the safest medical procedures performed today.</p>
+            </div>
+          </div>
+
+          <div class="myth-card">
+            <span class="myth-badge">MYTH</span>
+            <h3>You become weak forever.</h3>
+            <p class="myth-subtext">It's often said donation drains your strength permanently.</p>
+            <div class="fact-box">
+              <p><strong>Fact:</strong> Healthy adults replenish the donated plasma within 24 hours and red cells within
+                a few weeks. Most donors feel completely normal the same day.</p>
+            </div>
+          </div>
+
+          <div class="myth-card">
+            <span class="myth-badge">MYTH</span>
+            <h3>You can catch a disease.</h3>
+            <p class="myth-subtext">A common worry that stops many first-time donors.</p>
+            <div class="fact-box">
+              <p><strong>Fact:</strong> Every needle and bag is brand new and sealed. There is zero risk of contracting
+                any disease from the donation itself.</p>
+            </div>
+          </div>
+
+          <div class="myth-card">
+            <span class="myth-badge">MYTH</span>
+            <h3>Vegetarians or thin people cannot donate.</h3>
+            <p class="myth-subtext">Body type and diet are wrongly assumed to disqualify donors.</p>
+            <div class="fact-box">
+              <p><strong>Fact:</strong> Anyone above the required weight (usually 50 kg) with healthy hemoglobin can
+                donate, regardless of diet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Blood Donation Awareness Website by Team Apex</p>
+      <p>📍 Lahore, Pakistan, Earth &nbsp;|&nbsp; 🩸 Every Drop Counts</p>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle (same as Home and Donate pages)
+      const toggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links-ul');
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        navLinks.classList.toggle('nav-open');
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,410 @@
+/* =========================
+   CSS Custom Properties (Theme Colors)
+   ========================= */
+:root {
+    --red-dark: #991b1b;
+    --red-main: #dc2626;
+    --red-hover: #b91c1c;
+    --red-light: #fee2e2;
+    --red-bg: #ffdbdb;
+    --text-dark: #1f2937;
+    --text-body: #4b5563;
+    --text-muted: #830909;
+    --bg-page: #f8fafc;
+    --white: #ffffff;
+
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+    --shadow-red: 0 12px 32px rgba(185, 28, 28, 0.15);
+}
+
+/* =========================
+   Reset & Base
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    color: var(--red-dark);
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   Navigation Bar (Standard)
+   ========================= */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(153, 27, 27, 0.3);
+    border-radius: var(--radius-lg);
+
+    margin: 10px 12px 1px 12px;
+    padding: 10px 16px;
+
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-logo h1 {
+    color: var(--red-dark);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-links-ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links-ul a {
+    display: block;
+    color: var(--red-dark);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.18s;
+}
+
+.nav-links-ul a:hover {
+    background-color: #ffd6d6;
+}
+
+.nav-btn-a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--red-main);
+    border-radius: var(--radius-lg);
+    padding: 9px 18px;
+    transition: background-color 0.18s;
+    white-space: nowrap;
+}
+
+.nav-btn-a:hover {
+    background-color: var(--red-hover);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--red-dark);
+    border-radius: 2px;
+}
+
+/* =========================
+   Hero Banner Section
+   ========================= */
+.hero-banner {
+    background-color: var(--red-bg);
+    padding: 60px 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-sub {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--red-main);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-des {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-dark);
+}
+
+/* =========================
+   Section Intro Shared
+   ========================= */
+.section-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-sub {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red-main);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.section-intro h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+}
+
+/* =========================
+   Cards Grid System
+   ========================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================
+   Benefits Section
+   ========================= */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--bg-page);
+}
+
+.benefit-card {
+    background-color: #fff1f1;
+    border: 1px solid rgba(153, 27, 27, 0.411);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-red);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    font-size: 15px;
+    color: var(--text-body);
+}
+
+/* =========================
+   Myths vs Facts Section
+   ========================= */
+.myths-section {
+    padding: 80px 0;
+    background-color: #fdf2f2;
+    /* Very light red background */
+}
+
+.myth-card {
+    background-color: var(--white);
+    border: 1px solid rgba(153, 27, 27, 0.2);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.myth-badge {
+    background-color: var(--text-dark);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.myth-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.myth-subtext {
+    font-size: 14px;
+    color: var(--text-body);
+    margin-bottom: 20px;
+}
+
+.fact-box {
+    background-color: #e9fdef;
+    /* Light green box to show truth */
+    border-left: 4px solid rgb(34, 197, 94);
+    padding: 16px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-top: auto;
+    /* Pushes to the bottom of the card */
+    width: 100%;
+}
+
+.fact-box p {
+    font-size: 14px;
+    color: #166534;
+}
+
+/* =========================
+   Footer (Standard)
+   ========================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--red-dark);
+    padding: 40px 24px;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 900px) {
+
+    /* Mobile Nav */
+    .nav-btn-a {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links-ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        width: 100%;
+        padding: 8px 0 4px;
+        border-top: 1px solid rgba(153, 27, 27, 0.2);
+        margin-top: 4px;
+    }
+
+    .nav-links-ul.nav-open {
+        display: flex;
+    }
+
+    .nav-links-ul li {
+        width: 100%;
+    }
+
+    .nav-links-ul a {
+        display: block;
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    /* Sections */
+    .benefits-section,
+    .myths-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin: 8px;
+        padding: 10px 14px;
+    }
+
+    .hero-banner {
+        padding: 40px 16px;
+    }
+
+    .cards-grid {
+        padding: 0 16px;
+        grid-template-columns: 1fr;
+    }
+}
