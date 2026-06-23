@@ -146,12 +146,10 @@ nav {
    Thank You Main & Section
    ========================= */
 
-/* Center the box vertically since there is no footer */
 .thank-you-main {
     min-height: calc(100vh - 120px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    /* Removed flex centering to push content to the top */
 }
 
 .thank-you-section {
@@ -163,6 +161,10 @@ nav {
 
     background-color: #6d1010;
     width: 100%;
+
+    /* The navbar has a 28px bottom margin on desktop. 
+       We use -27px to pull the section up and leave exactly a 1px gap. */
+    margin-top: -27px;
 
     padding: 70px 20px 70px 20px;
     text-align: center;
@@ -198,7 +200,6 @@ nav {
     font-size: clamp(15px, 3vw, 20px);
     font-weight: 500;
 }
-
 
 /* =========================
    RESPONSIVE — Tablet  (≤ 900px)
@@ -263,5 +264,6 @@ nav {
 
     .thank-you-section {
         padding: 50px 16px;
+        margin-top: -19px;
     }
 }
