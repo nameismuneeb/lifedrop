@@ -58,7 +58,7 @@ a {
 }
 
 /* =========================
-   Navigation Bar (Standard)
+   Navigation Bar (Standard - Locked)
    ========================= */
 nav {
     display: flex;
@@ -161,174 +161,210 @@ nav {
 }
 
 /* =========================
-   Hero Banner Section
+   Restored Original Body Background
+   ========================= */
+.main-background {
+    background-color: #f8f1e8;
+}
+
+/* =========================
+   Hero Banner Section (Restored Original Styles)
    ========================= */
 .hero-banner {
-    background-color: var(--red-bg);
-    padding: 60px 24px;
+    background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
+    padding: 100px 24px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .hero-sub {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--red-main);
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #e8cfc8;
+    letter-spacing: 5px;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .hero-title {
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 800;
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 700;
+    color: #f7eee7;
     margin-bottom: 20px;
 }
 
 .hero-des {
-    font-size: clamp(16px, 2vw, 18px);
-    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(15px, 2vw, 16px);
+    font-weight: 400;
+    color: #f3ddd6;
 }
 
 /* =========================
-   Section Intro Shared
+   Section Intro Shared (Restored Original Styles)
    ========================= */
 .section-intro {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+    padding: 0 20px;
 }
 
 .intro-sub {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--red-main);
-    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #9d111d;
+    letter-spacing: 3px;
     display: block;
     margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .section-intro h2 {
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 4vw, 40px);
+    color: #171313;
+    font-weight: normal;
 }
 
 /* =========================
-   Cards Grid System
+   Cards Grid System (Responsive Structure Maintained)
    ========================= */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    max-width: 1100px;
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 4%;
 }
 
 /* =========================
    Benefits Section
    ========================= */
 .benefits-section {
-    padding: 80px 0;
-    background-color: var(--bg-page);
+    padding: 60px 0 45px 0;
 }
 
 .benefit-card {
-    background-color: #fff1f1;
-    border: 1px solid rgba(153, 27, 27, 0.411);
-    border-radius: var(--radius-md);
-    padding: 32px 24px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
+    /* Restored original white clean card design */
+    background-color: #ffffff;
+    border: none;
+    border-top: 4px solid #800a1d;
+    border-radius: 12px;
+    padding: 35px 40px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-red);
-}
-
-.card-icon {
-    font-size: 40px;
-    margin-bottom: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
 .benefit-card h3 {
+    font-family: "Inter", sans-serif;
     font-size: 20px;
+    font-weight: 700;
+    color: var(--red-dark);
     margin-bottom: 12px;
 }
 
 .benefit-card p {
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     color: var(--text-body);
 }
 
 /* =========================
-   Myths vs Facts Section
+   Myths vs Facts Section (Restored Original Desktop View)
    ========================= */
 .myths-section {
-    padding: 80px 0;
-    background-color: #fdf2f2;
-    /* Very light red background */
+    padding: 45px 0 100px 0;
+}
+
+.myth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
 }
 
 .myth-card {
-    background-color: var(--white);
-    border: 1px solid rgba(153, 27, 27, 0.2);
-    border-radius: var(--radius-md);
-    padding: 32px 24px;
-    box-shadow: var(--shadow-sm);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* Horizontal flex layout restored */
     align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+    padding: 35px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    border: none;
 }
 
 .myth-badge {
-    background-color: var(--text-dark);
-    color: var(--white);
-    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
     font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 16px;
+    background-color: #f6ebeb;
+    /* Restored original pinkish background */
+    color: #a46d71;
+    /* Restored original text color */
+    padding: 6px 14px;
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
-.myth-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: var(--text-dark);
+.myth-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.myth-content-wrapper h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1513;
+    margin: 0;
 }
 
 .myth-subtext {
-    font-size: 14px;
-    color: var(--text-body);
-    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #7a6e6a;
+    margin-top: 12px;
+    margin-bottom: 8px;
 }
 
-.fact-box {
-    background-color: #e9fdef;
-    /* Light green box to show truth */
-    border-left: 4px solid rgb(34, 197, 94);
-    padding: 16px;
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    margin-top: auto;
-    /* Pushes to the bottom of the card */
-    width: 100%;
+.fact-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #4a3e3b;
+    margin: 0;
 }
 
-.fact-box p {
-    font-size: 14px;
-    color: #166534;
+.fact-content b {
+    color: #8a1823;
+    font-weight: 700;
+    margin-right: 4px;
 }
 
 /* =========================
-   Footer (Standard)
+   Footer (Standard - Locked)
    ========================= */
 footer {
     display: flex;
@@ -347,7 +383,7 @@ footer p {
 }
 
 /* =========================
-   Responsive Design
+   Responsive Design Breakpoints
    ========================= */
 @media (max-width: 900px) {
 
@@ -386,10 +422,9 @@ footer p {
         font-size: 16px;
     }
 
-    /* Sections */
-    .benefits-section,
-    .myths-section {
-        padding: 60px 0;
+    /* Adjust padding for tablet */
+    .hero-banner {
+        padding: 70px 24px;
     }
 }
 
@@ -400,11 +435,22 @@ footer p {
     }
 
     .hero-banner {
-        padding: 40px 16px;
+        padding: 50px 16px;
     }
 
     .cards-grid {
         padding: 0 16px;
         grid-template-columns: 1fr;
+    }
+
+    .myth-container {
+        padding: 0 16px;
+    }
+
+    /* Stacking Myth Cards vertically for mobile screens to ensure responsiveness */
+    .myth-card {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 20px;
     }
 }
