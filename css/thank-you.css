@@ -5,7 +5,7 @@
     --red-dark: #991b1b;
     --red-main: #dc2626;
     --red-hover: #b91c1c;
-    --bg-page:#f7eee7;
+    --bg-page: #f7eee7;
     --white: #ffffff;
 
     --radius-sm: 12px;
@@ -39,8 +39,8 @@ a {
    ========================= */
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 8px;
 
@@ -50,7 +50,7 @@ nav {
     border: 1px solid rgba(153, 27, 27, 0.3);
     border-radius: var(--radius-lg);
 
-    margin: 10px 12px 28px 12px;
+    margin: 10px 12px 10px 12px;
     padding: 10px 16px;
 
     position: sticky;
@@ -145,51 +145,76 @@ nav {
 /* =========================
    Thank You Main & Section
    ========================= */
-   
-   .thankyou-wrapper {
+
+.thankyou-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: flex-start;
     align-items: center;
+
     min-height: 100vh;
     background-color: #f7eee7;
-   
+
 }
 
 .thankyou-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
     background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
-    box-shadow: 0 8px 25px rgba(128, 10, 29, 0.06);
-    padding: 100px 20%;
+
     width: 100%;
-    height: 350px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
 }
 
-.thankyou-banner h3{
+.thankyou-banner h1 {
+    margin: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 80px;
-  font-weight: 700;
-  margin: 0 0 12px 0;
-  color:#f7eee7;
-  text-align: center;
+    font-weight: 700;
+    color: #f7eee7;
 }
 
-.thankyou-banner h5{
-    font-family:  'Montserrat' sans-serif;
+.thankyou-banner h2 {
+    margin: 0;
+    font-family: 'Montserrat' sans-serif;
     font-size: 15px;
     word-spacing: 5px;
     color: #f7eee7;
-    text-align: center;
 }
 
-.thankyou-note{
-    font-family:  'Montserrat' sans-serif;
+.thankyou-banner a {
+    display: inline-block;
+
     font-size: 20px;
-    word-spacing: 5px;
+    font-weight: 700;
+
+    color: #610512;
+    background: #f6e9d7;
+    border-radius: 20px;
+
+    padding: 10px 20px;
+}
+
+.thankyou-banner a:hover {
+    background: #f6e9d7e5;
+}
+
+.thankyou-note {
+    font-family: 'Montserrat' sans-serif;
+
     color: #510400;
-    text-align:left;
-    display: flex;
-    align-self: flex-start;
-    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 5px;
+    text-align: center;
+
+    margin: 10px 20px 0 10px;
 }
 
 
