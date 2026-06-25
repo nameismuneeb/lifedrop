@@ -5,12 +5,30 @@
     --red-dark: #991b1b;
     --red-main: #dc2626;
     --red-hover: #b91c1c;
+    --red-light: #fee2e2;
+    --red-bg: #ffdbdb;
+    --text-dark: #1f2937;
+    --text-body: #4b5563;
     --bg-page: #f8fafc;
     --white: #ffffff;
 
     --radius-sm: 12px;
     --radius-md: 20px;
     --radius-lg: 30px;
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+    --shadow-red: 0 12px 32px rgba(185, 28, 28, 0.15);
+
+    /* ---- Restored original-site colors (hero + location cards) ---- */
+    --hero-grad-start: #610512;
+    --hero-grad-end: #800a1d;
+    --hero-sub-color: #e8cfc8;
+    --hero-title-color: #f7eee7;
+    --hero-des-color: #f3ddd6;
+    --cream-bg: #f8f1e8;
+    --card-accent: #9d111d;
+    --card-text: #171313;
 }
 
 /* =========================
@@ -27,6 +45,7 @@ body {
     padding: 0;
     font-family: "Inter", sans-serif;
     background-color: var(--bg-page);
+    color: var(--text-body);
     -webkit-text-size-adjust: 100%;
 }
 
@@ -34,6 +53,7 @@ h1,
 h2,
 h3 {
     margin: 0;
+    color: var(--red-dark);
 }
 
 p {
@@ -46,7 +66,7 @@ a {
 }
 
 /* =========================
-   Navigation Bar (Locked)
+   Navigation Bar (Standard)
    ========================= */
 nav {
     display: flex;
@@ -146,17 +166,10 @@ nav {
 }
 
 /* =========================
-   Main Background
-   ========================= */
-.main-background {
-    background-color: #f8f1e8;
-}
-
-/* =========================
-   Hero Banner Section (Restored Original Styles)
+   Hero Banner Section
    ========================= */
 .hero-banner {
-    background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
+    background: linear-gradient(180deg, var(--hero-grad-start) 0%, var(--hero-grad-end) 100%);
     padding: 60px 24px;
     display: flex;
     justify-content: center;
@@ -164,66 +177,64 @@ nav {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 760px;
 }
 
 .hero-sub {
-    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 600;
-    color: #e8cfc8;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    word-spacing: 5px;
+    color: var(--hero-sub-color);
     display: block;
     margin-bottom: 15px;
 }
 
 .hero-title {
     font-family: 'Libre Baskerville', serif;
-    font-size: clamp(32px, 5vw, 50px);
+    font-size: clamp(28px, 7vw, 50px);
     font-weight: 700;
-    color: #f7eee7;
+    color: var(--hero-title-color);
     margin-bottom: 20px;
 }
 
 .hero-des {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(15px, 2vw, 16px);
+    font-size: 15px;
     font-weight: 400;
-    color: #f3ddd6;
-    margin: 0 auto;
+    margin: 0;
+    color: var(--hero-des-color);
 }
 
 /* =========================
    Locations Grid System
    ========================= */
 .locations-section {
-    padding: 60px 24px 100px 24px;
+    padding: 40px 8% 100px 8%;
+    background-color: var(--cream-bg);
 }
 
 .cards-grid {
     display: grid;
-    /* Responsive grid: fits cards dynamically */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* This rule automatically puts cards next to each other on big screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 /* =========================
-   Location Card Style (Restored Original Styles)
+   Location Card Style
    ========================= */
 .location-card {
-    background-color: #ffffff;
+    background-color: var(--white);
     border: 1px solid transparent;
     border-radius: 12px;
     padding: 30px;
-    text-align: left;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
 }
 
 .location-card:hover {
@@ -236,11 +247,9 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-size: 11px;
     font-weight: bold;
-    color: #9d111d;
+    color: var(--card-accent);
     letter-spacing: 3px;
     margin-bottom: 25px;
-    background: transparent;
-    padding: 0;
 }
 
 .location-card h3 {
@@ -248,35 +257,45 @@ nav {
     font-size: 23px;
     margin-bottom: 9px;
     font-weight: bold;
-    color: #171313;
+    color: var(--card-text);
 }
 
 .location-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 11.5px;
+    font-size: 10px;
+    margin-bottom: 5px;
     font-weight: 400;
-    color: #171313;
-    margin-bottom: 20px;
+    color: var(--card-text);
+}
+
+.location-card hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(153, 27, 27, 0.1);
+    margin-bottom: 16px;
+    margin-top: auto;
+    /* Pushes the line and link to the bottom */
 }
 
 .hospital-link {
     font-family: 'Poppins', sans-serif;
+    margin-top: 3px;
     font-size: 14px;
     font-weight: bold;
-    color: #9d111d;
+    color: var(--card-accent);
+    text-decoration: none;
     display: inline-block;
     width: fit-content;
-    margin-top: auto;
-    /* Keeps the link aligned to the bottom of the card */
     transition: color 0.2s ease;
 }
 
 .hospital-link:hover {
-    color: #1a1513;
+    color: var(--card-text);
+    cursor: pointer;
 }
 
 /* =========================
-   Footer (Locked)
+   Footer (Standard)
    ========================= */
 footer {
     display: flex;
@@ -295,7 +314,7 @@ footer p {
 }
 
 /* =========================
-   Responsive Breakpoints
+   Responsive Design
    ========================= */
 @media (max-width: 900px) {
 
@@ -350,12 +369,12 @@ footer p {
     }
 
     .locations-section {
-        padding: 40px 16px 60px 16px;
+        padding: 40px 16px;
     }
 
-    /* Cards naturally fall to 1 column due to auto-fit grid,
-       but we ensure the gap looks good */
     .cards-grid {
         grid-template-columns: 1fr;
     }
+
+    /* One card per row on mobile */
 }
