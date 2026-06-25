@@ -151,10 +151,8 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     min-height: 100vh;
     background-color: #f7eee7;
-
 }
 
 .thankyou-banner {
@@ -163,13 +161,13 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    text-align: center;
+    /* Ensures content is centered */
 
     background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
-
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-
 }
 
 .thankyou-banner h1 {
@@ -182,7 +180,8 @@ nav {
 
 .thankyou-banner h2 {
     margin: 0;
-    font-family: 'Montserrat' sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* Fixed missing comma */
     font-size: 15px;
     word-spacing: 5px;
     color: #f7eee7;
@@ -190,14 +189,11 @@ nav {
 
 .thankyou-banner a {
     display: inline-block;
-
     font-size: 20px;
     font-weight: 700;
-
     color: #610512;
     background: #f6e9d7;
     border-radius: 20px;
-
     padding: 10px 20px;
 }
 
@@ -206,23 +202,20 @@ nav {
 }
 
 .thankyou-note {
-    font-family: 'Montserrat' sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
+    /* Fixed missing comma */
     color: #510400;
     font-size: 16px;
     font-weight: 500;
     word-spacing: 5px;
     text-align: center;
-
     margin: 10px 20px 0 10px;
 }
-
 
 /* =========================
    RESPONSIVE — Tablet  (≤ 900px)
    ========================= */
 @media (max-width: 900px) {
-
     .nav-btn-a {
         display: none;
     }
@@ -262,7 +255,6 @@ nav {
    RESPONSIVE — Mobile  (≤ 600px)
    ========================= */
 @media (max-width: 600px) {
-
     nav {
         margin: 8px 8px 20px 8px;
         padding: 10px 14px;
@@ -282,5 +274,18 @@ nav {
     .thank-you-section {
         padding: 50px 16px;
         margin-top: -19px;
+    }
+
+    /* Fixed mobile text size and alignment */
+    .thankyou-banner h1 {
+        font-size: 45px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .thankyou-banner h2 {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
     }
 }
