@@ -161,27 +161,29 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-align: center;
-    /* Ensures content is centered */
+    text-align: center; 
 
     background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .thankyou-banner h1 {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 80px;
+    font-size: clamp(40px, 12vw, 80px); 
     font-weight: 700;
     color: #f7eee7;
+    text-align: center;
+    white-space: nowrap; 
+    width: 100%;
 }
 
 .thankyou-banner h2 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    /* Fixed missing comma */
+    font-family: 'Montserrat', sans-serif; 
     font-size: 15px;
     word-spacing: 5px;
     color: #f7eee7;
@@ -202,8 +204,7 @@ nav {
 }
 
 .thankyou-note {
-    font-family: 'Montserrat', sans-serif;
-    /* Fixed missing comma */
+    font-family: 'Montserrat', sans-serif; 
     color: #510400;
     font-size: 16px;
     font-weight: 500;
@@ -275,13 +276,7 @@ nav {
         padding: 50px 16px;
         margin-top: -19px;
     }
-
-    .thankyou-banner h1 {
-        font-size: 30px;
-        white-space: nowrap;
-        text-align: center;
-    }
-
+    
     .thankyou-banner h2 {
         font-size: 14px;
         text-align: center;
