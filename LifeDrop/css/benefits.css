@@ -1,0 +1,456 @@
+/* =========================
+   CSS Custom Properties (Theme Colors)
+   ========================= */
+:root {
+    --red-dark: #991b1b;
+    --red-main: #dc2626;
+    --red-hover: #b91c1c;
+    --red-light: #fee2e2;
+    --red-bg: #ffdbdb;
+    --text-dark: #1f2937;
+    --text-body: #4b5563;
+    --text-muted: #830909;
+    --bg-page: #f8fafc;
+    --white: #ffffff;
+
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+    --shadow-red: 0 12px 32px rgba(185, 28, 28, 0.15);
+}
+
+/* =========================
+   Reset & Base
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    color: var(--red-dark);
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   Navigation Bar (Standard - Locked)
+   ========================= */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(153, 27, 27, 0.3);
+    border-radius: var(--radius-lg);
+
+    margin: 10px 12px 1px 12px;
+    padding: 10px 16px;
+
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-logo h1 {
+    color: var(--red-dark);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-links-ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links-ul a {
+    display: block;
+    color: var(--red-dark);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.18s;
+}
+
+.nav-links-ul a:hover {
+    background-color: #ffd6d6;
+}
+
+.nav-btn-a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--red-main);
+    border-radius: var(--radius-lg);
+    padding: 9px 18px;
+    transition: background-color 0.18s;
+    white-space: nowrap;
+}
+
+.nav-btn-a:hover {
+    background-color: var(--red-hover);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--red-dark);
+    border-radius: 2px;
+}
+
+/* =========================
+   Restored Original Body Background
+   ========================= */
+.main-background {
+    background-color: #f8f1e8;
+}
+
+/* =========================
+   Hero Banner Section (Restored Original Styles)
+   ========================= */
+.hero-banner {
+    background: linear-gradient(180deg, #610512 0%, #800a1d 100%);
+    padding: 100px 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #e8cfc8;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 700;
+    color: #f7eee7;
+    margin-bottom: 20px;
+}
+
+.hero-des {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(15px, 2vw, 16px);
+    font-weight: 400;
+    color: #f3ddd6;
+}
+
+/* =========================
+   Section Intro Shared (Restored Original Styles)
+   ========================= */
+.section-intro {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 0 20px;
+}
+
+.intro-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #9d111d;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.section-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 4vw, 40px);
+    color: #171313;
+    font-weight: normal;
+}
+
+/* =========================
+   Cards Grid System (Responsive Structure Maintained)
+   ========================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* =========================
+   Benefits Section
+   ========================= */
+.benefits-section {
+    padding: 60px 0 45px 0;
+}
+
+.benefit-card {
+    /* Restored original white clean card design */
+    background-color: #ffffff;
+    border: none;
+    border-top: 4px solid #800a1d;
+    border-radius: 12px;
+    padding: 35px 40px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red-dark);
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: var(--text-body);
+}
+
+/* =========================
+   Myths vs Facts Section (Restored Original Desktop View)
+   ========================= */
+.myths-section {
+    padding: 45px 0 100px 0;
+}
+
+.myth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.myth-card {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal flex layout restored */
+    align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+    padding: 35px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    border: none;
+}
+
+.myth-badge {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    background-color: #f6ebeb;
+    /* Restored original pinkish background */
+    color: #a46d71;
+    /* Restored original text color */
+    padding: 6px 14px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.myth-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.myth-content-wrapper h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1513;
+    margin: 0;
+}
+
+.myth-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #7a6e6a;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.fact-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #4a3e3b;
+    margin: 0;
+}
+
+.fact-content b {
+    color: #8a1823;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+/* =========================
+   Footer (Standard - Locked)
+   ========================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--red-dark);
+    padding: 40px 24px;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   Responsive Design Breakpoints
+   ========================= */
+@media (max-width: 900px) {
+
+    /* Mobile Nav */
+    .nav-btn-a {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links-ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        width: 100%;
+        padding: 8px 0 4px;
+        border-top: 1px solid rgba(153, 27, 27, 0.2);
+        margin-top: 4px;
+    }
+
+    .nav-links-ul.nav-open {
+        display: flex;
+    }
+
+    .nav-links-ul li {
+        width: 100%;
+    }
+
+    .nav-links-ul a {
+        display: block;
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    /* Adjust padding for tablet */
+    .hero-banner {
+        padding: 70px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin: 8px;
+        padding: 10px 14px;
+    }
+
+    .hero-banner {
+        padding: 50px 16px;
+    }
+
+    .cards-grid {
+        padding: 0 16px;
+        grid-template-columns: 1fr;
+    }
+
+    .myth-container {
+        padding: 0 16px;
+    }
+
+    /* Stacking Myth Cards vertically for mobile screens to ensure responsiveness */
+    .myth-card {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 20px;
+    }
+}

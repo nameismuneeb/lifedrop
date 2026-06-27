@@ -1,0 +1,461 @@
+/* =========================
+   CSS Custom Properties (From Home Page)
+   ========================= */
+:root {
+    --red-dark: #991b1b;
+    --red-main: #dc2626;
+    --red-hover: #b91c1c;
+    --red-light: #fee2e2;
+    --red-bg: #fee0e0;
+    --text-dark: #1f2937;
+    --text-body: #4b5563;
+    --bg-page: #f8fafc;
+    --white: #ffffff;
+
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Reset & Base
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--red-bg);
+    color: var(--text-body);
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   Navigation Bar (Same as Home Page)
+   ========================= */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(153, 27, 27, 0.3);
+    border-radius: var(--radius-lg);
+    margin: 10px 12px 28px 12px;
+    padding: 10px 16px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-logo h1 {
+    color: var(--red-dark);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-links-ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links-ul a {
+    display: block;
+    color: var(--red-dark);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.18s;
+}
+
+.nav-links-ul a:hover {
+    background-color: #ffd6d6;
+}
+
+.nav-btn-a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--red-main);
+    border-radius: var(--radius-lg);
+    padding: 9px 18px;
+    transition: background-color 0.18s;
+    white-space: nowrap;
+}
+
+.nav-btn-a:hover {
+    background-color: var(--red-hover);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--red-dark);
+    border-radius: 2px;
+}
+
+/* =========================
+   Form Section
+   ========================= */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px 60px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.form-header h1 {
+    color: var(--red-dark);
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.form-header p {
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+form {
+    background-color: #fff6f6;
+    border: 1px solid rgb(226, 109, 109);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 20px rgba(199, 59, 59, 0.10);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    /* Limits size on large screens */
+    transition: box-shadow 0.3s;
+}
+
+form:hover {
+    box-shadow: 0px 0px 20px rgba(216, 51, 51, 0.2);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #830909;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid rgb(177, 26, 26);
+    border-radius: var(--radius-sm);
+    background-color: var(--white);
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.input-group input[type="text"]:hover,
+.input-group input[type="email"]:hover,
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus {
+    background-color: #fff0f0;
+    outline: none;
+}
+
+/* Radio Buttons Layout */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: var(--white);
+    padding: 12px;
+    border: 1px solid rgb(177, 26, 26);
+    border-radius: var(--radius-sm);
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.radio-item label {
+    margin: 0;
+    color: var(--text-dark);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submit-button-container {
+    margin-top: 30px;
+}
+
+form button {
+    width: 100%;
+    background-color: var(--red-main);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+form button:hover {
+    background-color: rgb(189, 1, 1);
+    transform: scale(0.98);
+}
+
+/* =========================
+   Guidelines Section
+   ========================= */
+.guidelines-section {
+    background-color: var(--bg-page);
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guidelines-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.guidelines-header h2 {
+    color: var(--red-dark);
+    font-size: clamp(24px, 4vw, 35px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.guideline-cards-collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns side by side on big screens */
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.guideline-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guideline-card {
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.title-card {
+    text-align: center;
+    padding: 16px;
+}
+
+.before-donating-card {
+    background-color: #e9fdef;
+    border: 1px solid rgb(34, 197, 94);
+}
+
+.before-donating-card h3,
+.before-donating-card h4,
+.before-donating-card p {
+    color: #166534;
+}
+
+.before-donating-card:hover {
+    background-color: #e1feea;
+    box-shadow: 0 4px 12px rgba(17, 121, 48, 0.15);
+    transform: translateY(-3px);
+}
+
+.after-donating-card {
+    background-color: #eff6ff;
+    border: 1px solid rgb(59, 130, 246);
+}
+
+.after-donating-card h3,
+.after-donating-card h4,
+.after-donating-card p {
+    color: #1e3a8a;
+}
+
+.after-donating-card:hover {
+    background-color: #dbeafe;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    transform: translateY(-3px);
+}
+
+.guideline-card h4 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.guideline-card p {
+    font-size: 15px;
+}
+
+/* =========================
+   Footer (Same as Home Page)
+   ========================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--red-dark);
+    padding: 40px 24px;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+/* Tablet & Smaller Screens */
+@media (max-width: 900px) {
+
+    /* Mobile Nav */
+    .nav-btn-a {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links-ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        width: 100%;
+        padding: 8px 0 4px;
+        border-top: 1px solid rgba(153, 27, 27, 0.2);
+        margin-top: 4px;
+    }
+
+    .nav-links-ul.nav-open {
+        display: flex;
+    }
+
+    .nav-links-ul li {
+        width: 100%;
+    }
+
+    .nav-links-ul a {
+        display: block;
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    /* Change grid to one column on small screens */
+    .guideline-cards-collection {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    nav {
+        margin: 8px;
+        padding: 10px 14px;
+    }
+
+    .form-section {
+        padding: 10px 16px 40px;
+    }
+
+    form {
+        padding: 24px 20px;
+    }
+
+    .guidelines-section {
+        padding: 40px 16px;
+    }
+
+    .guideline-card {
+        padding: 20px 16px;
+    }
+}
