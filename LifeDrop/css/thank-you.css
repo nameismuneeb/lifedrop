@@ -143,10 +143,10 @@ nav {
 }
 
 /* =========================
-   Thank You Main & Section
+   Thank You Main & Sections
    ========================= */
 
-.thankyou-wrapper {
+.main-thanyou {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -191,26 +191,32 @@ nav {
 
 .thankyou-banner a {
     display: inline-block;
-    font-size: 20px;
+
+    font-size: 1.2rem;
     font-weight: 700;
+
     color: #610512;
     background: #f6e9d7;
+    box-shadow: 0 5px 20px rgb(41, 1, 1);
     border-radius: 20px;
-    padding: 10px 20px;
+
+    padding: 0.3rem 0.8rem;
 }
 
 .thankyou-banner a:hover {
-    background: #f6e9d7e5;
+    box-shadow: none;
 }
 
 .thankyou-note {
     font-family: 'Montserrat', sans-serif; 
+    
     color: #510400;
     font-size: 16px;
     font-weight: 500;
     word-spacing: 5px;
+
     text-align: center;
-    margin: 10px 20px 0 10px;
+    padding: 0.1rem 0 0 1rem;
 }
 
 /* =========================
