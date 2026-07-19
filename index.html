@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - LifeDrop</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-logo">
+                <img src="image/logo-red.png" alt="LifeDrop logo">
+                <h1>LifeDrop</h1>
+            </div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="locations.html">Locations</a></li>
+            </ul>
+
+            <a href="donate.html" class="nav-btn-a">Become a Donor</a>
+        </nav>
+
+        <main>
+            <section class="hero-section">
+                <div class="hero-text-container">
+                    <h1>Donate Blood,<br>Save Lives</h1>
+                    <p>Every two seconds, someone needs blood. A single donation can save up to three lives. Stand with
+                        us become a voluntary donor and turn empathy into action.</p>
+                    <a href="donate.html" class="btn-primary">Become a Donor</a>
+                </div>
+                <img src="image/hero-lady.jpg" alt="A smiling blood donor">
+            </section>
+
+            <section class="what-section">
+                <h1>What Is Blood Donation?</h1>
+                <p>Blood donation is the voluntary process of giving blood to help people who need it for medical
+                    treatment. Donated blood is used during surgeries, accidents, childbirth, and for patients suffering
+                    from serious illnesses. A healthy person can safely donate blood, and a single donation can save
+                    multiple lives. Blood cannot be artificially produced, so donations from volunteers are essential
+                    for hospitals and emergency care.</p>
+            </section>
+
+            <section class="why-section">
+                <h1>Why Donate Blood?</h1>
+                <div class="why-cards-container">
+                    <article class="why-card">
+                        <h2>💪 Saves Lives</h2>
+                        <p>One blood donation can save up to three lives. Patients involved in accidents, surgeries, and
+                            medical treatments often rely on donated blood for survival.</p>
+                    </article>
+                    <article class="why-card">
+                        <h2>🩸 Health Benefits</h2>
+                        <p>Blood donation helps maintain healthy blood circulation and encourages the body to produce
+                            new blood cells. Regular health screenings during donation can also help monitor your
+                            well-being.</p>
+                    </article>
+                    <article class="why-card">
+                        <h2>🏆 Supports the Community</h2>
+                        <p>Blood cannot be artificially produced. By donating blood, you help ensure that hospitals have
+                            a steady
+                            supply for emergencies and patients in need.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="compatibility-table-section">
+                <h1>Blood Type Compatibility</h1>
+                <div class="table-wrapper">
+                    <table class="compatibility-table">
+                        <thead>
+                            <tr>
+                                <th>Blood Type</th>
+                                <th>Can Donate To</th>
+                                <th>Can Receive From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>O-</td>
+                                <td>All blood types</td>
+                                <td>O-</td>
+                            </tr>
+                            <tr>
+                                <td>O+</td>
+                                <td>O+, A+, B+, AB+</td>
+                                <td>O+, O-</td>
+                            </tr>
+                            <tr>
+                                <td>A-</td>
+                                <td>A-, A+, AB-, AB+</td>
+                                <td>A-, O-</td>
+                            </tr>
+                            <tr>
+                                <td>A+</td>
+                                <td>A+, AB+</td>
+                                <td>A+, A-, O+, O-</td>
+                            </tr>
+                            <tr>
+                                <td>B-</td>
+                                <td>B-, B+, AB-, AB+</td>
+                                <td>B-, O-</td>
+                            </tr>
+                            <tr>
+                                <td>B+</td>
+                                <td>B+, AB+</td>
+                                <td>B+, B-, O+, O-</td>
+                            </tr>
+                            <tr>
+                                <td>AB-</td>
+                                <td>AB-, AB+</td>
+                                <td>AB-, A-, B-, O-</td>
+                            </tr>
+                            <tr>
+                                <td>AB+</td>
+                                <td>AB+</td>
+                                <td>All blood types</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Blood Donation Awareness Website by Team Apex</p>
+            <p>📍 Lahore, Pakistan, Earth &nbsp;|&nbsp; 🩸 Every Drop Counts</p>
+        </footer>
+
+        <script>
+            // Hamburger menu toggle
+            const toggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links-ul');
+            toggle.addEventListener('click', () => {
+                const open = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!open));
+                navLinks.classList.toggle('nav-open');
+            });
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('nav-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
