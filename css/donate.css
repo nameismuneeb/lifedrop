@@ -233,25 +233,26 @@ form:hover {
 
 /* Radio Buttons Layout */
 .radio-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    background-color: var(--white);
-    padding: 12px;
-    border: 1px solid rgb(177, 26, 26);
-    border-radius: var(--radius-sm);
+    display: block;
+    padding: 0;
+    border: none;
+    background: transparent;
 }
 
 .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.radio-item input[type="radio"] {
+    margin-right: 6px;
 }
 
 .radio-item label {
     margin: 0;
-    color: var(--text-dark);
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
+    color: #830909;
     cursor: pointer;
 }
 
